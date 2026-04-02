@@ -752,6 +752,7 @@ PUSHOVER_API_TOKEN=your_api_token
 - 接入点可配 `LONGBRIDGE_HTTP_URL`、`LONGBRIDGE_QUOTE_WS_URL`、`LONGBRIDGE_TRADE_WS_URL`、`LONGBRIDGE_REGION`
 - 其余可选参数见官方 [环境变量说明](https://open.longbridge.com/zh-CN/docs/getting-started#环境变量)
 - 仅在 YFinance（美股）或 AkShare（港股）返回数据不完整时自动触发，不影响 A 股链路
+- 集成联调请使用 `tests/longbridge_live_smoke.py`（手动脚本，不参与 pytest 收集）；离线单元测试已覆盖于 `tests/test_longbridge_fetcher.py`，可通过 `./scripts/ci_gate.sh` 一并验证
 
 ### 东财接口频繁失败时的处理
 
